@@ -1,0 +1,19 @@
+#!/usr/bin/env python
+import jumble
+
+# list file, delimited by newline
+word_list = './english-words'
+
+# say hi and build dictionary
+print("Hello world. Please wait while I build a dictionary from " + word_list)
+dictionary = jumble.build_dictionary(word_list)
+
+# santize user input and get results
+user_input = raw_input("Thanks for waiting. Enter a word to jumble: ").strip().lower()
+results = jumble.jumble( user_input, dictionary )
+
+# print nicely if results, say sorry if no!
+if results:
+    print("Found " + str(len(results)) + " possible words:\n" + "\n".join(results))
+else:
+    print("Sorry, we ain't got no words.")
