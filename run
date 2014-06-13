@@ -10,7 +10,7 @@ dictionary = jumble.build_dictionary(word_list)
 
 # santize user input and get results
 user_input = raw_input("Thanks for waiting. Enter a word to jumble: ").strip().lower()
-results = jumble.jumble( user_input, dictionary )
+results = jumble.jumble(user_input, dictionary)
 
 # print nicely if results, say sorry if no!
 if results:
